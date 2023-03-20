@@ -90,7 +90,7 @@ export default function Home() {
                 type="submit"
                 className=" w-[80%] self-center mt-5 py-2 rounded-md text-primaryBlue bg-white  border-primaryBlue border-2 "
               >
-                Create Bidders Account
+                Create Bidder Account
               </button>
             </div>
           </div>
