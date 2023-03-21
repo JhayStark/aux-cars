@@ -1,94 +1,93 @@
 import Image from "next/image";
-import Link from "next/link";
-import { FaUserAlt, FaKey } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import React from "react";
 
 const Register = () => {
   return (
-    <div className="bg-[#24213a] flex justify-center items-center min-h-[100vh] min-w-[100vw]">
-      <div className="flex flex-row items-center justify-around w-full ">
-        <div className=" bg-[#3a3756] flex rounded-xl px-16 py-10  md:px-20 md:py-10 gap-10 text-white  flex-col items-center justify-center">
-          <h1 className="text-3xl font-semibold ">AuctionAce</h1>
-          <div className="flex flex-row items-end gap-1 ">
-            <FaUserAlt className="text-lg text-blue-500 " />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="First Name"
-              className="p-1 px-2 bg-transparent border-b-2 border-white outline-none"
-            />
-          </div>
-          <div className="flex flex-row items-end gap-1 ">
-            <FaUserAlt className="text-lg text-blue-500 " />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Last Name"
-              className="p-1 px-2 bg-transparent border-b-2 border-white outline-none"
-            />
-          </div>
-          <div className="flex flex-row items-end gap-1 ">
-            <MdEmail className="text-lg text-blue-500 " />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Email"
-              className="p-1 px-2 bg-transparent border-b-2 border-white outline-none"
-            />
-          </div>
-          <div className="flex flex-row items-end gap-1 ">
-            <FaKey className="text-lg text-blue-500" />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Password"
-              className="p-1 px-2 bg-transparent border-b-2 border-white outline-none"
-            />
-          </div>
-          <div className="flex flex-row items-end gap-1 ">
-            <FaKey className="text-lg text-blue-500" />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Confirm Password "
-              className="p-1 px-2 bg-transparent border-b-2 border-white outline-none"
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center gap-2">
-            <Link
-              href="/auth/login"
-              className="text-sm font-medium text-gray-300"
-            >
-              Already have an account?...Login
-            </Link>
-            <button className="bg-[#7666ff] font-medium py-1 px-3 rounded hover:opacity-80">
-              Sign Up
-            </button>
-            <p className="text-sm font-medium text-gray-300">
-              Forgot your password?...
-            </p>
+    <>
+      <section className="flex flex-row min-h-screen font-roboto">
+        <img
+          src="/images/authBmw.png"
+          alt="register Image"
+          className="min-w-[65vw] h-screen hidden lg:block"
+        />
+        <div className="flex flex-col items-center justify-center w-full bg-center bg-cover bg-authBmw lg:bg-whitebg ">
+          <div className="flex flex-col items-center justify-center w-full h-[100%] bg-white bg-opacity-90">
+            <h1 className="font-bold text-[#0146E9] text-3xl mb-6 md:mb-10 lg:mb-2 ">
+              AUXCARS
+            </h1>
+            <div className="w-[70%] ">
+              <h1 className="mb-3 text-xl font-bold ">Register</h1>
+              <div className="flex flex-col gap-3 md:gap-5 lg:gap-3 xl:gap-5">
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="fullName">Full Name</label>
+                  <input
+                    type="fullName"
+                    placeholder="Full Name"
+                    id="fullName"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    id="email"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="phoneNumber">Phone Number</label>
+                  <input
+                    type="phoneNumber"
+                    placeholder="Phone Number"
+                    id="phoneNumber"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="ghanaCard">Ghana Card</label>
+                  <input
+                    type="ghanaCard"
+                    placeholder="GhanaCard"
+                    id="ghanaCard"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    id="password"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <div className="flex flex-col w-full ">
+                  <label htmlFor="password">Confirm Password</label>
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    id="password"
+                    className="lg:bg-[#e2e2e2] bg-white outline-none p-2 rounded-md md:h-12 h-9 xl:h-12 lg:h-10 mt-2 lg:mt-1 xl:mt-2"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="w-full p-2 lg:p-1 xl:p-2 mt-2  bg-[#007AFF] rounded-md text-white"
+                >
+                  Sign Up
+                </button>
+                <p className="text-sm md:text-center">
+                  Already have an account?
+                  <span className="text-[#007AFF]"> Sign In</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex-col items-center justify-center hidden lg:flex">
-          <div className="flex flex-col items-center justify-center text-white">
-            <h1 className="text-2xl">Intelligent platform for</h1>
-            <h1 className="text-xl font-bold">
-              running efficient and secure auctions
-            </h1>
-            <h1 className="text-lg font-semibold">
-              With this platform you can auction, bid and access competitive
-              pricing.
-            </h1>
-          </div>
-          <Image src="/auctioneer_bidders.png" width={400} height={400} />
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

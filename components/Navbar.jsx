@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdArrowBackIosNew } from "react-icons/md";
@@ -29,18 +30,22 @@ const Navbar = () => {
           </a>
         </ul>
         <div className="hidden gap-2 lg:flex">
-          <button
-            type="button"
-            className="p-1 text-[#0146E9] border-2 border-[#0146e9] w-24 font-medium rounded "
-          >
-            Sign In
-          </button>
-          <button
-            type="button"
-            className="p-1 font-medium text-white bg-[#0146e9] w-24 rounded "
-          >
-            Join Us
-          </button>
+          <Link href="/auth/login">
+            <button
+              type="button"
+              className="p-1 text-[#0146E9] border-2 border-[#0146e9] w-24 font-medium rounded "
+            >
+              Sign In
+            </button>
+          </Link>
+          <Link href="/auth/register">
+            <button
+              type="button"
+              className="p-1 font-medium text-white bg-[#0146e9] w-24 rounded "
+            >
+              Join Us
+            </button>
+          </Link>
         </div>
       </nav>
       <nav
@@ -71,18 +76,22 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex flex-col w-[70%] md:w-[30%] gap-2">
-            <button
-              type="button"
-              className="p-2 text-[#0146E9] border-2 border-[#0146e9] font-medium rounded "
-            >
-              Sign In
-            </button>
-            <button
-              type="button"
-              className="p-2 font-medium text-white bg-[#0146e9]  w-full rounded "
-            >
-              Join Us
-            </button>
+            <Link href="/auth/login">
+              <button
+                type="button"
+                className="p-2 text-[#0146E9] border-2 border-[#0146e9] font-medium rounded "
+              >
+                Sign In
+              </button>
+            </Link>
+            <Link href="/auth/register">
+              <button
+                type="button"
+                className="p-2 font-medium text-white bg-[#0146e9]  w-full rounded "
+              >
+                Join Us
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
